@@ -67,9 +67,9 @@ extension ScheduleModelPicker: UIPickerViewDelegate {
 
             if myLabelName == "Ext. Lunch" {
                 pickerDelegate?.selectionMade(schedule: "Extended Lunch")
-            } else if myLabelName == "Ext. Break" {
+            } else if myLabelName == "Final Exam" {
 
-                pickerDelegate?.selectionMade(schedule: "Extended Break")
+                pickerDelegate?.selectionMade(schedule: "Final Exam")
 
             } else {
 
@@ -90,9 +90,9 @@ extension ScheduleModelPicker: UIPickerViewDelegate {
         case "Minimum":
             // Set Regular Schedule Notifications
             print("Minimum Schedule Set")
-        case "Extended Break":
+        case "Final Exam":
             // Set Regular Schedule Notifications
-            print("Extended Break Schedule Set")
+            print("Final Exam (Day 1) Schedule Set")
         case "Extended Lunch":
             // Set Regular Schedule Notifications
             print("Extended Lunch Schedule Set")

@@ -16,7 +16,7 @@ class Data {
         let regularSchedule = alarmModel.turnDatesIntoDateComponet(scheduleDictionary: alarmModel.regularSchedule)
         let lateStartSchedule = alarmModel.turnDatesIntoDateComponet(scheduleDictionary: alarmModel.lateStartSchedule)
         let extendedLunchSchedule = alarmModel.turnDatesIntoDateComponet(scheduleDictionary: alarmModel.extendedLunchSchedule)
-        let extendedBreakSchedule = alarmModel.turnDatesIntoDateComponet(scheduleDictionary: alarmModel.extendedBreakSchedule)
+        let finalExamScheduleFirstDay = alarmModel.turnDatesIntoDateComponet(scheduleDictionary: alarmModel.finalExamScheduleFirstDay)
         let rallySchedule = alarmModel.turnDatesIntoDateComponet(scheduleDictionary: alarmModel.rallySchedule)
         let mimimumSchedule = alarmModel.turnDatesIntoDateComponet(scheduleDictionary: alarmModel.minimumSchedule)
 
@@ -25,7 +25,7 @@ class Data {
         data.append(ScheduleModel(scheduleName: "Regular", schedule: regularSchedule))
         data.append(ScheduleModel(scheduleName: "Late Start", schedule: lateStartSchedule))
         data.append(ScheduleModel(scheduleName: "Ext. Lunch", schedule: extendedLunchSchedule))
-        data.append(ScheduleModel(scheduleName: "Ext. Break", schedule: extendedBreakSchedule))
+        data.append(ScheduleModel(scheduleName: "Final Exam", schedule: finalExamScheduleFirstDay))
         data.append(ScheduleModel(scheduleName: "Rally", schedule: rallySchedule))
         data.append(ScheduleModel(scheduleName: "Minimum", schedule: mimimumSchedule))
 

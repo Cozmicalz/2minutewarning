@@ -14,12 +14,12 @@ class MyAlarm {
     let year = Calendar.current.component(.year, from: Date())
     let month = Calendar.current.component(.month, from: Date())
     let day = Calendar.current.component(.day, from: Date())
-    let regularSchedule: [Int: String] = [0: "7:45", 1: "8:37", 2: "9:34", 3: "10:31", 4: "11:38", 5: "12:35", 6: "14:07", 7: "15:04"]
-    let lateStartSchedule: [Int: String] = [0: "9:50", 1: "10:24", 2: "11:03", 3: "11:42", 4: "12:21", 5: "13:39", 6: "14:18", 7: "14:57"]
-    let extendedLunchSchedule: [Int: String] = [0: "7:45", 1: "8:33", 2: "9:26", 3: "10:19", 4: "11:22", 5: "12:15", 6: "14:11", 7: "15:04"]
-    let extendedBreakSchedule: [Int: String] = [0: "7:45", 1: "8:35", 2: "9:30", 3: "10:25", 4: "11:44", 5: "12:39", 6: "14:09", 7: "15:04"]
-    let rallySchedule: [Int: String] = [0: "7:45", 1: "8:29", 2: "9:18", 3: "10:07", 4: "12:02", 5: "12:51", 6: "14:15", 7: "15:04"]
-    let minimumSchedule: [Int: String] = [0: "7:45", 1: "8:15", 2: "8:50", 3: "9:25", 4: "10:00", 5: "10:45", 6: "11:20", 7: "11:55"]
+    let regularSchedule: [Int: String] = [0: "8:30", 1: "9:22", 2: "10:18", 3: "11:14", 4: "12:10", 5: "13:41", 6: "14:37", 7: "15:33"]
+    let lateStartSchedule: [Int: String] = [0: "9:50", 1: "10:24", 2: "11:02", 3: "11:40", 4: "12:18", 5: "13:31", 6: "14:09", 7: "14:47"]
+    let extendedLunchSchedule: [Int: String] = [0: "8:30", 1: "9:18", 2: "10:10", 3: "11:02", 4: "11:54", 5: "13:49", 6: "14:41", 7: "15:33"]
+    let finalExamScheduleFirstDay: [Int: String] = [0: "8:30", 1: "10:30", 2: "11:19", 3: "11:58", 4: "12:37", 5: "13:51", 6: "14:30", 7: "15:09"]
+    let rallySchedule: [Int: String] = [0: "8:30", 1: "9:15", 2: "10:04", 3: "10:53", 4: "12:31", 5: "13:55", 6: "14:44", 7: "15:33"]
+    let minimumSchedule: [Int: String] = [0: "8:30", 1: "9:00", 2: "9:34", 3: "10:08", 4: "10:52", 5: "11:26", 6: "12:00", 7: "12:34"]
 
     let userCalender = Calendar.current
     // data.append(ScheduleModel(scheduleName: "Rally", period0: "7:45-8:37", period1: "8:42-9:34", period2: "9:39-10:31", period3: "10:31", breakPeriod: "10:31-10:41", period4: "10:46-11:38", period5: "11:43-12:35", lunch: "12:35-1:10", period6: "1:15-2:07", period7: "2:12-3:04", date: "My Date"))
@@ -86,9 +86,9 @@ class MyAlarm {
         case "Minimum":
             // Set Regular Schedule Notifications
             print("Minimum Schedule Set")
-        case "Extended Break":
+        case "Final Exam":
             // Set Regular Schedule Notifications
-            print("Extended Break Schedule Set")
+            print("Final Exam (Day 1) Schedule Set")
         case "Extended Lunch":
             // Set Regular Schedule Notifications
             print("Extended Lunch Schedule Set")
@@ -195,9 +195,9 @@ class MyAlarm {
 
             timeInt = getTimeUntilNextPeriod(scheduleDictionary: extendedLunchSchedule)
 
-        case "Extended Break":
+        case "Final Exam":
 
-            timeInt = getTimeUntilNextPeriod(scheduleDictionary: extendedBreakSchedule)
+            timeInt = getTimeUntilNextPeriod(scheduleDictionary: finalExamScheduleFirstDay)
 
         case "Rally":
 
