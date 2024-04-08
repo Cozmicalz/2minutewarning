@@ -230,7 +230,7 @@ class MyAlarm {
         let componentsArray = getDateComponentsInOrder(scheduleDictionary: scheduleDictionary)
         
         // Sort the array so the least time remaining will appear first
-        var newArray = componentsArray.sorted(by: { $0.date!.timeIntervalSinceNow < $1.date!.timeIntervalSinceNow })
+        let newArray = componentsArray.sorted(by: { $0.date!.timeIntervalSinceNow < $1.date!.timeIntervalSinceNow })
 
         if newArray.count == 0 {
 
